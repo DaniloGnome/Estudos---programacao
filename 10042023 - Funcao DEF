@@ -1,0 +1,359 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyMN2b5avp8E6wQEV3+MnY1e",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/DaniloGnome/Program--Prof-Pablo/blob/main/10042023%20-%20Funcao%20DEF\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 6,
+      "metadata": {
+        "id": "vTPJw0HHGUdB"
+      },
+      "outputs": [],
+      "source": [
+        "### declaracao da funcao \"def\"\n",
+        "def my_first_function():\n",
+        "  print ('minha primeira funcao')"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "### chamando a funcao a cima\n",
+        "my_first_function()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "F4_6fDkgIMhM",
+        "outputId": "1d9e29ec-d19d-47a0-81fd-c674877f7725"
+      },
+      "execution_count": 7,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "minha primeira funcao\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def pronomeTratam(pronome):\n",
+        "  print(pronome,\"Danilo\")"
+      ],
+      "metadata": {
+        "id": "f544zf-RI1SL"
+      },
+      "execution_count": 11,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "pronomeTratam('Senhor')\n",
+        "pronomeTratam('Ilmo')\n",
+        "pronomeTratam('Seu')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "vlQpLFgGJC27",
+        "outputId": "b5967974-e987-455e-97a7-50950d48082f"
+      },
+      "execution_count": 12,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Senhor Danilo\n",
+            "Ilmo Danilo\n",
+            "Seu Danilo\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def tratamNome (pronome, nome):\n",
+        "  print(pronome, nome)"
+      ],
+      "metadata": {
+        "id": "K6T6nUD9J09S"
+      },
+      "execution_count": 13,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "tratamNome('Dr.','Danilo')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "kMGWICx_KmrC",
+        "outputId": "d1095ab9-9200-4e2c-89d9-6bf5fd65047d"
+      },
+      "execution_count": 15,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Dr. Danilo\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "### Pedir nome e ano. E mostrar nome e idade\n",
+        "\n",
+        "nome = (input(\"Digite seu nome :\"))\n",
+        "anoNasc = int(input(\"Digite seu ano de Nascimento :\"))\n",
+        "\n",
+        "def nomeEAno(nome, anoNasc):\n",
+        "  idade = 2023 - anoNasc\n",
+        "  print(nome, idade,'anos')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Ryyx_uNuK-L7",
+        "outputId": "58c445eb-3be5-475a-a1f7-59f336ec7e36"
+      },
+      "execution_count": 30,
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "Digite seu nome :Danilo\n",
+            "Digite seu ano de Nascimento :1993\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "nomeEAno('Danilo',1993)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ygnP89-yNtTH",
+        "outputId": "fcc4e970-e12c-40b1-c6eb-b59c139e5d02"
+      },
+      "execution_count": 32,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Danilo 30 anos\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "### mostra o IMC\n",
+        "### Formula > peso/altura**2\n",
+        "\n",
+        "def imc (altura, peso):\n",
+        "  print(peso/(altura*altura))"
+      ],
+      "metadata": {
+        "id": "bqqBhfG4OcG-"
+      },
+      "execution_count": 53,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "imc(1.65, 83)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "zcln5X-PO_SG",
+        "outputId": "61bb9b99-3436-4043-ccab-065048370098"
+      },
+      "execution_count": 54,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "30.48668503213958\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def imc (altura, peso):\n",
+        "  return peso/(altura*altura)"
+      ],
+      "metadata": {
+        "id": "hSf6CjyQRb8G"
+      },
+      "execution_count": 58,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "imc(1.65, 83) > 30"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "1C36UFTlRTpv",
+        "outputId": "6c666233-75b6-4353-a771-974412b09fda"
+      },
+      "execution_count": 59,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "True"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 59
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#### O calculo de juros simples é dado pela formula\n",
+        "### J = C * i * t\n",
+        "### sendo :\n",
+        "### J = juros simples\n",
+        "### C = capital inicial\n",
+        "### i = taxa de juros\n",
+        "### t = tempo de aplicacoes\n",
+        "### crie uma funcao que recebe um valor de empresitimo\n",
+        "### tempo e retorne quanto sera pago de juros ao final o periodo\n",
+        "### use uma taxa de juros de 2.5%\n",
+        "\n",
+        "def calculo(C, t):\n",
+        "    i = 0.025\n",
+        "    juros = C * i * t\n",
+        "    return juros\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "2HXpE5IGZtqT"
+      },
+      "execution_count": 76,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "calculo(1000, 5)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ONjaTWAydCJG",
+        "outputId": "20e3ff47-451e-4c67-9772-e261ab002ace"
+      },
+      "execution_count": 75,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "125.0"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 75
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "C = float(input('digite o valor do emprestimo'))\n",
+        "t = int(input('quanto meses será o emprestimo'))\n",
+        "calculo(C, t)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "4_OasUYHfbZt",
+        "outputId": "6d57315d-d383-4a77-e049-55391431b193"
+      },
+      "execution_count": 80,
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "digite o valor do emprestimo1000\n",
+            "quanto meses será o emprestimo10\n"
+          ]
+        },
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "250.0"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 80
+        }
+      ]
+    }
+  ]
+}
